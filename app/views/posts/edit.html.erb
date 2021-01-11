@@ -1,0 +1,10 @@
+<div class="posts-wrapper">
+  <div class="posts-container">
+    <h2 class="page-title">編集</h2>
+    <%= form_tag("/posts/#{@post.id}/edit") do %>
+    <textarea name="content"><%= @post.content %></textarea>
+    <% end %>
+    </ul>
+  </div>
+</div>
+</div>

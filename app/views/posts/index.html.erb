@@ -1,0 +1,12 @@
+<div class="posts-wrapper">
+  <div class="posts-container">
+    <h2 class="page-title">投稿一覧</h2>
+    <div class="posts-box">
+      <ul>
+        <% @posts.each do |post| %>
+        <li class="posts-text"><%= link_to(post.content, "/posts/#{post.id}/show") %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

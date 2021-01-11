@@ -1,0 +1,12 @@
+<div class="post-wrapper">
+  <div class="post-container">
+    <h2 class="page-title">投稿詳細</h2>
+    <div class="post-box">
+      <p class="post-text"><%= @post.content %></p>
+      <div class="post-destroy-button">
+        <%= link_to("削除", "/posts/#{@post.id}/destroy") %>
+      </div>
+    </div>
+  </div>
+  <p class="return-text"><%= link_to("戻る", "/posts/index") %></p>
+</div>
