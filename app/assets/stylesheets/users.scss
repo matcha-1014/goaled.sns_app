@@ -1,18 +1,14 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.posts-wrapper {
+.users-wrapper {
   padding-top: 40px;
 }
 
-.posts-container {
+.users-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.posts-box {
+.users-box {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #666;
@@ -20,29 +16,29 @@
   margin: 0 auto;
 }
 
-.posts-text {
+.users-text {
   padding: 20px 10px;
   display: block;
   border-top: 1px solid #ccc;
 }
 
-.posts-text > a{
+.users-text > a{
   color: #222;
 }
 
 /* show.html.erb */
 
-.post-wrapper {
+.user-wrapper {
   padding-top: 40px;
 }
 
-.post-container {
+.user-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
-.post-box {
+.user-box {
   width: 80%;
   height: 300px;
   padding: 40px;
@@ -53,18 +49,18 @@
   position: relative;
 }
 
-.post-text {
+.user-text {
   font-size: 24px;
 }
 
-.post-destroy-button {
+.user-destroy-button {
   position: absolute;
   bottom: 15%;
   right: 25%;
   margin-top: 50px;
 }
 
-.post-destroy-button a {
+.user-destroy-button a {
   color: #555;
 }
 
@@ -80,18 +76,18 @@
 
 /* new.html.erb */
 
-.new-post-wrapper {
+.new-user-wrapper {
   padding-top: 40px;
 }
 
-.new-post-container {
+.new-user-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
 }
 
 .form {
-  padding: 10px;
+  padding: 30px;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #666;
@@ -106,6 +102,15 @@
   color: #ee0000;
 }
 
+.new-user-element {
+  margin-bottom: 15px;
+}
+
+.new-user-input {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
 textarea {
   width: 100%;
   min-height: 110px;
@@ -114,6 +119,8 @@ textarea {
 }
 
 .submit-button {
+  display: block;
+  margin: auto;
   border: 1px solid #ccc;
   font-size: 20px;
   border-radius: 10px;
