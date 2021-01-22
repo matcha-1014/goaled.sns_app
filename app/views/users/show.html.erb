@@ -1,0 +1,11 @@
+<div class="user-wrapper">
+  <div class="user-container">
+    <h2 class="page-title">ユーザー詳細</h2>
+    <p class="user-detail"><%= @user.name %></p>
+    <p class="user-detail"><%= @user.email %></p>
+    <div class="user-edit-button">
+      <%= link_to("編集", "/users/#{@user.id}/edit") %>
+    </div>
+  </div>
+  <p class="return-text"><%= link_to("戻る", "/users/index") %></p>
+</div>
