@@ -1,3 +1,4 @@
+/* 共通レイアウト */
 .users-wrapper {
   padding-top: 40px;
 }
@@ -8,7 +9,9 @@
   text-align: center;
 }
 
-.users-box {
+/* index.html.erb */
+
+.users-index-box {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #666;
@@ -16,29 +19,19 @@
   margin: 0 auto;
 }
 
-.users-text {
+.users-index-text {
   padding: 20px 10px;
   display: block;
   border-top: 1px solid #ccc;
 }
 
-.users-text > a{
+.users-index-text > a{
   color: #222;
 }
 
 /* show.html.erb */
 
-.user-wrapper {
-  padding-top: 40px;
-}
-
-.user-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.user-box {
+.users-show-box {
   width: 80%;
   height: 300px;
   padding: 40px;
@@ -49,18 +42,23 @@
   position: relative;
 }
 
-.user-text {
+.users-show-name {
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.user-destroy-button {
+.users-show-detail {
+  margin-bottom: 10px;
+}
+
+.users-show-destroy-button {
   position: absolute;
   bottom: 15%;
   right: 25%;
   margin-top: 50px;
 }
 
-.user-destroy-button a {
+.users-show-destroy-button a {
   color: #555;
 }
 
@@ -75,16 +73,6 @@
 }
 
 /* new.html.erb */
-
-.new-user-wrapper {
-  padding-top: 40px;
-}
-
-.new-user-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .form {
   padding: 30px;
@@ -102,12 +90,12 @@
   color: #ee0000;
 }
 
-.new-user-element {
+.users-new-element {
   margin-bottom: 15px;
   font-size: 18px;
 }
 
-.new-user-input {
+.users-new-input {
   width: 60%;
   margin-bottom: 30px;
 }

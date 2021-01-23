@@ -1,6 +1,4 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* 共通レイアウト */
 
 .posts-wrapper {
   padding-top: 40px;
@@ -11,8 +9,9 @@
   margin: 0 auto;
   text-align: center;
 }
+/* index.html.erb */
 
-.posts-box {
+.posts-index-box {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 4px #666;
@@ -20,29 +19,19 @@
   margin: 0 auto;
 }
 
-.posts-text {
+.posts-index-text {
   padding: 20px 10px;
   display: block;
   border-top: 1px solid #ccc;
 }
 
-.posts-text > a{
+.posts-index-text > a{
   color: #222;
 }
 
 /* show.html.erb */
 
-.post-wrapper {
-  padding-top: 40px;
-}
-
-.post-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.post-box {
+.posts-show-box {
   width: 80%;
   height: 300px;
   padding: 40px;
@@ -53,18 +42,18 @@
   position: relative;
 }
 
-.post-text {
+.posts-show-text {
   font-size: 24px;
 }
 
-.post-destroy-button {
+.posts-show-destroy-button {
   position: absolute;
   bottom: 15%;
   right: 25%;
   margin-top: 50px;
 }
 
-.post-destroy-button a {
+.posts-show-destroy-button a {
   color: #555;
 }
 
@@ -79,16 +68,6 @@
 }
 
 /* new.html.erb */
-
-.new-post-wrapper {
-  padding-top: 40px;
-}
-
-.new-post-container {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .form {
   padding: 10px;

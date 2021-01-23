@@ -1,9 +1,9 @@
-<div class="user-wrapper">
-  <div class="user-container">
+<div class="users-wrapper">
+  <div class="users-container">
     <h2 class="page-title">ユーザー詳細</h2>
-    <p class="user-detail"><%= @user.name %></p>
-    <p class="user-detail"><%= @user.email %></p>
-    <div class="user-edit-button">
+    <p class="users-show-name"><%= @user.name %></p>
+    <p class="users-show-detail"><%= @user.email %></p>
+    <div class="users-show-edit-button">
       <%= link_to("編集", "/users/#{@user.id}/edit") %>
     </div>
   </div>
