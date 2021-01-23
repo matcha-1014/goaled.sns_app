@@ -1,7 +1,7 @@
 <div class="users-wrapper">
   <div class="users-container">
     <h2 class="page-title">新規登録</h2>
-    <%= form_tag("/users/create") do %>
+    <%= form_tag("/users/create", {multipart: true}) do %>
     <div class="form">
       <% @user.errors.full_messages.each do |message| %>
       <div class="error-message">
@@ -9,13 +9,11 @@
       </div>
       <% end %>
       <p class="users-new-element">ユーザー名</p>
-      <input class="users-new-input" name="name" type="text">
+      <input class="users-new-input" name="name" type="text" value="<%= @user.name %>">
       <p class="users-new-element">メールアドレス</p>
-      <input class="users-new-input" name="email" type="text">
-      <p class="users-new-element">ユーザー画像</p>
-      <input class="users-new-input" name="user_image" type="file">
+      <input class="users-new-input" name="email" type="text" value="<%= @user.email %>">
       <p class="users-new-element">パスワード</p>
-      <input class="users-new-input" name="password" type="password">
+      <input class="users-new-input" name="password" type="password" value="<%= @user.password %>">
       <input class="submit-button" type="submit" value="新規登録">
     </div>
     <% end %>
