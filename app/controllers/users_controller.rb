@@ -7,6 +7,15 @@ class UsersController < ApplicationController
     @user = User.new()
   end
 
+  def create
+    @user = User.new(name: params[:name], email: params[:name])
+    if @user.save
+      redirect_to("/users/index")
+    else
+      render("users/new")
+    end
+  end
+
   def show
     @user = User.find_by(id: params[:id])
   end
@@ -25,16 +34,8 @@ class UsersController < ApplicationController
       flash[:notice] = "ユーザー情報を更新しました"
       redirect_to("/users/#{@user.id}")
     else
-      render("users#edit")
+      render("users/edit")
     end
   end
 
-  def create
-    @user = User.new(name: params[:name], email: params[:name])
-    if @user.save
-      redirect_to("/users/index")
-    else
-      render("users/new")
-    end
-  end
 end
