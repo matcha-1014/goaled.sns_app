@@ -1,0 +1,24 @@
+<div class="users-wrapper">
+  <div class="users-container">
+    <h2 class="page-title">編集</h2>
+    <div class="form">
+      <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+      <% @user.errors.full_messages.each do |message| %>
+      <div class="error-message">
+        <p><%= message %></p>
+      </div>
+      <% end %>
+      <p class="users-new-element">ユーザー名</p>
+      <input class="users-new-input" name="name" type="text" value="<%= @user.name %>">
+      <p class="users-new-element">メールアドレス</p>
+      <input class="users-new-input" name="email" type="text" value="<%= @user.email %>">
+      <p class="users-new-element">ユーザー画像</p>
+      <input class="users-new-input" name="user_image" type="file">
+      <p class="users-new-element">パスワード</p>
+      <input class="users-new-input" name="password" type="password" value="<%= @user.password %>">
+      <input class="submit-button" type="submit" value="編集">
+    </div>
+    <% end %>
+  </div>
+  <p class="return-text"><%= link_to("戻る", "/users/#{@user.id}") %></p>
+</div>

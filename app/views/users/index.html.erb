@@ -4,7 +4,7 @@
     <div class="users-index-box">
       <ul>
         <% @users.each do |user| %>
-        <li class="users-index-text"><%= link_to(user.name, "/users/#{user.id}/show") %></li>
+        <li class="users-index-text"><%= link_to(user.name, "/users/#{user.id}") %></li>
         <% end %>
       </ul>
     </div>
