@@ -1,6 +1,7 @@
 <div class="users-wrapper">
   <div class="users-container">
     <h2 class="page-title">ユーザー詳細</h2>
+    <img class="users-show-user-image" src="<%= "/images/#{@user.user_image}" %>">
     <p class="users-show-name"><%= @user.name %></p>
     <p class="users-show-detail"><%= @user.email %></p>
     <div class="users-show-edit-button">

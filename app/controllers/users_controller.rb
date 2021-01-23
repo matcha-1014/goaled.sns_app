@@ -8,7 +8,18 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], email: params[:name])
+    @user = User.new(
+      name: params[:name],
+      email: params[:email],
+      user_image: "user_default.jpg",
+      password: params[:password]
+    )
+    # @user_image = params[:user_image]
+    # if @user_image
+    #   flash[:notice] = "画像が選択されませんでした"
+    #   @user.user_image = "#{@user.id}.jpg"
+    # end
+
     if @user.save
       redirect_to("/users/index")
     else
@@ -28,7 +39,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.email = params[:email]
-    @user.user_image = params[:user_image]
+    @user.user_image =  "user_default.jpg"
     @user.password = params[:password]
     if @user.save
       flash[:notice] = "ユーザー情報を更新しました"
