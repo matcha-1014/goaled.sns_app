@@ -1,8 +1,8 @@
 <div class="users-wrapper">
   <div class="users-container">
     <h2 class="page-title">新規登録</h2>
-    <%= form_tag("/users/create", {multipart: true}) do %>
     <div class="form">
+      <%= form_tag("/users/create", {multipart: true}) do %>
       <% @user.errors.full_messages.each do |message| %>
       <div class="error-message">
         <p><%= message %></p>
@@ -18,5 +18,4 @@
     </div>
     <% end %>
   </div>
-</div>
 </div>

@@ -1,0 +1,15 @@
+<div class="users-wrapper">
+  <div class="users-container">
+    <h2 class="page-title">ログイン</h2>
+    <div class="form">
+      <%= form_tag("/login") do %>
+
+      <p class="users-login-element">メールアドレス</p>
+      <input class="users-login-input" name="email" type="text">
+      <p class="users-login-element">パスワード</p>
+      <input class="users-login-input" name="password" type="password">
+      <input class="submit-button" type="submit" value="ログイン">
+    </div>
+    <% end %>
+  </div>
+</div>
