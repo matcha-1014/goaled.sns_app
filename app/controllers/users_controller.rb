@@ -31,6 +31,10 @@ class UsersController < ApplicationController
   end
 
   def edit
+    if params[:id].to_i != @current_user.id
+      flash[:notice] = "権限がありません"
+      redirect_to("/users/#{@current_user.id}")
+    end
     @user = User.find_by(id: params[:id])
   end
 

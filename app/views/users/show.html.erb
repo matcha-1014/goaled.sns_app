@@ -4,9 +4,11 @@
     <img class="users-show-user-image" src="<%= "/images/#{@user.user_image}" %>">
     <p class="users-show-name"><%= @user.name %></p>
     <p class="users-show-detail"><%= @user.email %></p>
+    <% if params[:id].to_i == @current_user.id %>
     <div class="users-show-edit-button">
       <%= link_to("編集", "/users/#{@user.id}/edit") %>
     </div>
+    <% end %>
   </div>
   <p class="return-text"><%= link_to("戻る", "/users/index") %></p>
 </div>
