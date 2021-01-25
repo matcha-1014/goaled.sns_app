@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :forbit_guest_user, only: [:index, :show, :edit, :update, :logout]
+  before_action :forbit_login_user, only: [:new, :create, :login, :login_form]
+  
   def index
     @users = User.all
   end
@@ -58,10 +61,22 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
+      session[:id] = @user.id
       flash[:notice] = "ログインしました"
       redirect_to("/users/#{@user.id}")
     else
+      @error_message = "メールアドレスかパスワードに不備があります"
+      @input_email = params[:email]
+      @input_password = params[:password]
       render("users/login_form")
+    end
+  end
+
+  def logout
+    if session[:id]
+      session[:id] = "nil"
+      flash[:notice] = "ログアウトしました"
+      redirect_to("/login")
     end
   end
 

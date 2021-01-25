@@ -17,8 +17,8 @@
       <p class="users-new-element">パスワード</p>
       <input class="users-new-input" name="password" type="password" value="<%= @user.password %>">
       <input class="submit-button" type="submit" value="編集">
+      <% end %>
     </div>
-    <% end %>
   </div>
   <p class="return-text"><%= link_to("戻る", "/users/#{@user.id}") %></p>
 </div>
